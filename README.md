@@ -4,7 +4,7 @@ This is the official Python SDK v2 for the [DocSDK](https://docsdk.com/api/v2) _
 For API v1, please use [v1 branch](https://github.com/dossdk/docsdk-python/tree/v1) of this repository.
 
 
-[![Build Status](https://travis-ci.org/docsdk/docsdk-python.svg?branch=master)](https://travis-ci.org/docsdk/docsdk-python)
+![PyPI](https://img.shields.io/pypi/v/cloudconvert)
 ## Installation
 
 ```
