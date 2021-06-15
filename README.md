@@ -1,7 +1,6 @@
 ## docsdk-python
 
-This is the official Python SDK v2 for the [DocSDK](https://docsdk.com/api/v2) _API v2_. 
-For API v1, please use [v1 branch](https://github.com/dossdk/docsdk-python/tree/v1) of this repository.
+This is the official Python SDK v2 for the [DocSDK](https://docsdk.com/api/v2) _API v2_.
 
 
 ![PyPI](https://img.shields.io/pypi/v/cloudconvert)
