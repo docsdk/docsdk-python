@@ -126,5 +126,4 @@ $ python tests/integration/testJobs.py
 
 ## Resources
 
-* [API v2 Documentation](https://docsdk.com/api/v2)
-* [DocSDK Blog](https://docsdk.com/blog)
+* [API v2 Documentation](https://docsdk.com/docAPI)
