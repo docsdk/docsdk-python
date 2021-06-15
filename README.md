@@ -3,7 +3,7 @@
 This is the official Python SDK v2 for the [DocSDK](https://docsdk.com/api/v2) _API v2_.
 
 
-![PyPI](https://img.shields.io/pypi/v/cloudconvert)
+![PyPI](https://img.shields.io/pypi/v/docsdk)
 ## Installation
 
 ```
