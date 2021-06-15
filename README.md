@@ -35,19 +35,19 @@ Or set the environment variable `DOCSDK_API_KEY` and use:
 
  docsdk.Job.create(payload={
      "tasks": {
-         'import-my-file': {
+         'ImportURL': {
               'operation': 'import/url',
               'url': 'https://my-url'
          },
-         'convert-my-file': {
+         'ConvertFile': {
              'operation': 'convert',
-             'input': 'import-my-file',
+             'input': 'ImportURL',
              'output_format': 'pdf',
              'some_other_option': 'value'
          },
-         'export-my-file': {
+         'ExportResult': {
              'operation': 'export/url',
-             'input': 'convert-my-file'
+             'input': 'ConvertFile'
          }
      }
  })
