@@ -6,13 +6,13 @@
 <p align="center"><a href="/README.md">English</a> | 中文</p>
 
 ## 关于 DocSDK
-> DocSDK 是一个智能文件转换的开发工具包。我们支持各类文档的转换，其中包括 pdf、doc、docx、xls、xlsx、ppt、pptx、dwg、caj、svg、html、json、png、jpg 和 gif 等等各种格式的转换，更多转换格式可查看[九云图网站](https://www.docsdk.com/) 。现有八种 SDK 的支持，其中包括 Java、Node.js、PHP、Python、Swift、CLI、AWS-Lambda 和 Laravel。
+> DocSDK 是一个在线文件转换的开发工具包。我们支持各类文档的转换，其中包括 pdf、doc、docx、xls、xlsx、ppt、pptx、dwg、caj、svg、html、json、png、jpg 和 gif 等等各种格式的转换，更多转换格式可查看[网站](https://www.docsdk.com/) 。现有八种 SDK 的支持，其中包括 Java、Node.js、PHP、Python、Swift、CLI、AWS-Lambda 和 Laravel。
 > 
 > **关键词： 文档转换，文件转换，PDF转Word，PDF转PPT，PDF转HTML**
 
 ## docsdk-python
 
-> 这是 [九云图 DocSDK API](https://www.docsdk.com/docAPI#sdk) 官方的 Python 开发工具包.
+> 这是 [DocSDK API](https://www.docsdk.com/docAPI#sdk) 官方的 Python 开发工具包.
 
 ![PyPI](https://img.shields.io/pypi/v/docsdk)
 
@@ -98,17 +98,6 @@ res = docsdk.Task.upload(file_name='path/to/sample.pdf', task=upload_task)
 res = docsdk.Task.find(id=upload_task_id)
 ```
 
-### 签署 Webhook
-
-节点 SDK 允许验证从 DocSDK 收到的 webhook 请求。
-
-```js
-payloadString = '...'; # The JSON string from the raw request body.
-signature = '...'; # The value of the "DocSDK-Signature" header.
-signingSecret = '...'; # You can find it in your webhook settings.
-
-isValid = docsdk.Webhook.verify(payloadString, signature, signingSecret); # returns true or false
-```
 
 ### 参考资源
 * [DocSDK API 文档](https://www.docsdk.com/docAPI)
