@@ -98,17 +98,6 @@ res = docsdk.Task.upload(file_name='path/to/sample.pdf', task=upload_task)
 
 res = docsdk.Task.find(id=upload_task_id)
 ```
-### Webhook Signing
-
-The node SDK allows to verify webhook requests received from DocSDK.
-
-```js
-payloadString = '...'; # The JSON string from the raw request body.
-signature = '...'; # The value of the "DocSDK-Signature" header.
-signingSecret = '...'; # You can find it in your webhook settings.
-
-isValid = docsdk.Webhook.verify(payloadString, signature, signingSecret); # returns true or false
-```
 
 ### Resources
 * [DocSDK API Documentation](https://www.docsdk.com/docAPI)
