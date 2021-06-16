@@ -59,8 +59,7 @@ Or set the environment variable `DOCSDK_API_KEY` and use:
 DocSDK can generate public URLs for using `export/url` tasks. You can use these URLs to download output files.
 
 ```js
-exported_url_task_id = "84e872fc-d823-4363-baab-eade2e05ee54"
-res = docsdk.Task.wait(id=exported_url_task_id) # Wait for job completion
+res = docsdk.Job.wait(job_id) # Wait for job completion
 file = res.get("result").get("files")[0]
 res = docsdk.download(filename=file['filename'], url=file['url'])
 print(res)
