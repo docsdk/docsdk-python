@@ -3,27 +3,26 @@
 </p>
 
 <h1 align="center">DocSDK</h1>
-<p align="center">English | <a href="doc/README-zh-CN.md">中文</a></p>
+<p align="center"><a href="/README.md">English</a> | 中文</p>
 
-## About DocSDK
-
-> DocSDK is a development kit for smart file conversion. We support the conversion of various types of documents, including pdf, doc, docx, xls, xlsx, ppt, pptx, dwg, caj, svg, html, json, png, jpg, gif and other formats, more conversion formats can be viewed on our [website](https://www.docsdk.com/). There are 8 kinds of SDK support, including Java, Node.js, PHP, Python, Swift, CLI, AWS-Lambda and Laravel.
+## 关于 DocSDK
+> DocSDK 是一个智能文件转换的开发工具包。我们支持各类文档的转换，其中包括 pdf、doc、docx、xls、xlsx、ppt、pptx、dwg、caj、svg、html、json、png、jpg 和 gif 等等各种格式的转换，更多转换格式可查看[九云图网站](https://www.docsdk.com/) 。现有八种 SDK 的支持，其中包括 Java、Node.js、PHP、Python、Swift、CLI、AWS-Lambda 和 Laravel。
 > 
-> **Keywords: document conversion, file conversion, PDF to Word, PDF to PPT, PDF to HTML**
+> **关键词： 文档转换，文件转换，PDF转Word，PDF转PPT，PDF转HTML**
 
 ## docsdk-python
 
-This is the official Python SDK for the [DocSDK API](https://docsdk.com/api/v2).
+> 这是 [九云图 DocSDK API](https://www.docsdk.com/docAPI#sdk) 官方的 Python 开发工具包.
 
 ![PyPI](https://img.shields.io/pypi/v/docsdk)
 
-### Installation
+### 安装
 
 ```
  pip install docsdk
 ```
 
-### Creating API Client
+### 创建 API Client
 
 ```
   import docsdk
@@ -31,7 +30,7 @@ This is the official Python SDK for the [DocSDK API](https://docsdk.com/api/v2).
   docsdk.configure(api_key = 'API_KEY', sandbox = False)
 ```
 
-Or set the environment variable `DOCSDK_API_KEY` and use:
+或者使用环境变量 `DOCSDK_API_KEY`：
 
 ```
   import docsdk
@@ -39,7 +38,7 @@ Or set the environment variable `DOCSDK_API_KEY` and use:
   docSDK.default()
 ```
 
-### Creating Jobs
+### 创建 Jobs
 
 ```js
  import docSDK
@@ -67,9 +66,9 @@ Or set the environment variable `DOCSDK_API_KEY` and use:
 
 ```
 
-### Downloading Files
+### 下载文件
 
-DocSDK can generate public URLs for using `export/url` tasks. You can use these URLs to download output files.
+DocSDK 可以使用 `export/url` 生成公开的链接，您可以使用这些 URL 下载输出文件。
 
 ```js
 res = docsdk.Job.wait(job_id) # Wait for job completion
@@ -78,9 +77,9 @@ res = docsdk.download(filename=file['filename'], url=file['url'])
 print(res)
 ```
 
-### Uploading Files
+### 上传文件
 
-Uploads to DocSDK are done via `import/upload` tasks. This SDK offers a convenient upload method:
+可通过 `import/upload` 上传文件。这是一种简单的上传方法：
 
 ```js
 job = docsdk.Job.create(payload={
@@ -98,9 +97,10 @@ res = docsdk.Task.upload(file_name='path/to/sample.pdf', task=upload_task)
 
 res = docsdk.Task.find(id=upload_task_id)
 ```
-### Webhook Signing
 
-The node SDK allows to verify webhook requests received from DocSDK.
+### 签署 Webhook
+
+节点 SDK 允许验证从 DocSDK 收到的 webhook 请求。
 
 ```js
 payloadString = '...'; # The JSON string from the raw request body.
@@ -110,6 +110,6 @@ signingSecret = '...'; # You can find it in your webhook settings.
 isValid = docsdk.Webhook.verify(payloadString, signature, signingSecret); # returns true or false
 ```
 
-### Resources
-* [DocSDK API Documentation](https://www.docsdk.com/docAPI)
-* [DocSDK home page](https://www.docsdk.com/)
+### 参考资源
+* [DocSDK API 文档](https://www.docsdk.com/docAPI)
+* [DocSDK 主页](https://www.docsdk.com/)
