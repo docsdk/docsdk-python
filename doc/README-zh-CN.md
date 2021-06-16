@@ -98,17 +98,6 @@ res = docsdk.Task.upload(file_name='path/to/sample.pdf', task=upload_task)
 res = docsdk.Task.find(id=upload_task_id)
 ```
 
-### 签署 Webhook
-
-节点 SDK 允许验证从 DocSDK 收到的 webhook 请求。
-
-```js
-payloadString = '...'; # The JSON string from the raw request body.
-signature = '...'; # The value of the "DocSDK-Signature" header.
-signingSecret = '...'; # You can find it in your webhook settings.
-
-isValid = docsdk.Webhook.verify(payloadString, signature, signingSecret); # returns true or false
-```
 
 ### 参考资源
 * [DocSDK API 文档](https://www.docsdk.com/docAPI)
